@@ -16,15 +16,21 @@ public class Enemy : MonoBehaviour {
 
     private float currentFacing = 0f;
 
-    public bool jump;
+    private bool jump;
+
+    private bool isTriggered = false;
 
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	void Update () {
-        ResolveFacingDirection();
-        ResolveMovingDirection();
+        if(isTriggered)
+        {
+            ResolveFacingDirection();
+            ResolveMovingDirection();
+        }
+
 	}
 
     void ResolveFacingDirection()
@@ -70,17 +76,39 @@ public class Enemy : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        controller.Move(direction * speed * Time.deltaTime, false, jump);
-        Debug.Log(jump);
-        jump = false;
+        if(isTriggered)
+        {
+            controller.Move(direction * speed * Time.deltaTime, false, jump);
+            jump = false;
+        }
     }
 
     public void HasCollided()
     {
-        Debug.Log("has collided");
         if(!IsInStoppingDistance())
         {
             jump = true;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(isPlayer(collision))
+        {
+            isTriggered = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(isPlayer(collision))
+        {
+            isTriggered = false;
+        }
+    }
+
+    private bool isPlayer(Collider2D collision)
+    {
+        return collision.tag == "Player";
     }
 }
