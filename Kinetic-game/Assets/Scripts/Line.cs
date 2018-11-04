@@ -10,6 +10,8 @@ public class Line : MonoBehaviour {
 
     List<Vector2> points;
 
+    private float lifetime = 3f;
+
     public void UpdateLine(Vector2 mousePos)
     {
         if(points == null)
@@ -33,6 +35,11 @@ public class Line : MonoBehaviour {
 
         if(points.Count > 1)
             edgeCol.points = points.ToArray();
+    }
+
+    private void Start()
+    {
+        Destroy(gameObject, lifetime);
     }
 
 }
