@@ -10,7 +10,7 @@ public class Line : MonoBehaviour {
 
     List<Vector2> points;
 
-    private float lifetime = 3f;
+    public float lifetime = 3f;
 
     public void UpdateLine(Vector2 mousePos)
     {

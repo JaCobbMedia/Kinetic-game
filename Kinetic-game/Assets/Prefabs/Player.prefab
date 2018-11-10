@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 50828826686312292}
   - component: {fileID: 114754915095733962}
   - component: {fileID: 114942113872137350}
+  - component: {fileID: 114771580748096732}
   - component: {fileID: 95685398259951478}
   m_Layer: 0
   m_Name: Player
@@ -197,6 +198,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114771580748096732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1845163818148490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5634e8db2f65b9c43a30bb9d3d38a95a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114942113872137350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,8 +256,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -307889119
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c63cc8b0c3db7ed4db973a35460bc6f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
