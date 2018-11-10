@@ -9,6 +9,7 @@ public class Laser_mechanics : MonoBehaviour {
     private GameObject target;
     private LaserSpawner laserSpawner;
     public float rotationSpeed = 10;
+    public float laserDamage = 30f;
 
     private void Start()
     {
@@ -45,7 +46,7 @@ public class Laser_mechanics : MonoBehaviour {
 
     public void HitTarget(GameObject hitTarget)
     {
-        Destroy(hitTarget);
-        target = null;
+        //Destroy(hitTarget);
+        hitTarget.GetComponent<PlayerStatus>().TakeDamage(laserDamage);
     }
 }
