@@ -14,7 +14,7 @@ public class Laser_mechanics : MonoBehaviour {
     private void Start()
     {
         target = GameObject.FindWithTag("Player");
-        laserSpawner = GameObject.Find("Laser_beam_spawn").GetComponent<LaserSpawner>();
+        laserSpawner = gameObject.GetComponentInChildren(typeof(LaserSpawner)) as LaserSpawner;
     }
 
     void Update () {

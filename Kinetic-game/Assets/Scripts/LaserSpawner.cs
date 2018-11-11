@@ -24,7 +24,7 @@ public class LaserSpawner : MonoBehaviour {
 
         if(lineRenderer.enabled == true && hit.collider.tag == "Player")
         {
-            Laser_mechanics laser_Mechanics = GameObject.Find("Laser_gun").GetComponent<Laser_mechanics>();
+            Laser_mechanics laser_Mechanics = gameObject.GetComponentInParent(typeof(Laser_mechanics)) as Laser_mechanics;
             laser_Mechanics.HitTarget(hit.collider.gameObject);
         }
 
