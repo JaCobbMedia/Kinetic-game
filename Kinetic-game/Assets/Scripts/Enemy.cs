@@ -6,47 +6,59 @@ public class Enemy : MonoBehaviour {
 
     public float speed;
 
-    public float stoppingDistance;
+    public float playerStoppingDistance;
+
+    public float spawningStoppingDistance;
 
     private Transform player;
 
     public CharacterController2D controller;
 
+    public Animator animator;
+
     private float direction = 0f;
 
     private float currentFacing = 0f;
+
+    private Vector2 spawningPosition;
 
     private bool jump;
 
     private bool isTriggered = false;
 
 	void Start () {
+        spawningPosition = new Vector3(transform.position.x, transform.position.y);
         player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	void Update () {
-        if(isTriggered)
+        if(isTriggered && !IsInPlayerStoppingDistance())
         {
-            ResolveFacingDirection();
-            ResolveMovingDirection();
+            ResolveFacingDirection(player.position);
+            ResolveMovingDirection(player.position);
+        }
+        if(!isTriggered && !IsInSpawningDistance())
+        {
+            ResolveFacingDirection(spawningPosition);
+            ResolveMovingDirection(spawningPosition);
         }
 
 	}
 
-    void ResolveFacingDirection()
+    void ResolveFacingDirection(Vector2 targetPosition)
     {
-        if (CalculateDirection(player.position, transform.position) != currentFacing)
+        if (CalculateDirection(targetPosition, transform.position) != currentFacing)
         {
             controller.Flip();
-            currentFacing = CalculateDirection(player.position, transform.position);
+            currentFacing = CalculateDirection(targetPosition, transform.position);
         }
     }
 
-    void ResolveMovingDirection()
+    void ResolveMovingDirection(Vector2 targetPosition)
     {
-        if (!IsInStoppingDistance())
+        if ((isTriggered && !IsInPlayerStoppingDistance()) || (!isTriggered && !IsInSpawningDistance()))
         {
-            direction = CalculateDirection(player.position, transform.position);
+            direction = CalculateDirection(targetPosition, transform.position);
         }
         else
         {
@@ -58,9 +70,14 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private bool IsInStoppingDistance()
+    private bool IsInPlayerStoppingDistance()
     {
-        return (Vector2.Distance(transform.position, player.position) < stoppingDistance);
+        return (Vector2.Distance(transform.position, player.position) < playerStoppingDistance);
+    }
+
+    private bool IsInSpawningDistance()
+    {
+        return (Vector2.Distance(transform.position, spawningPosition) < spawningStoppingDistance);
     }
 
     float CalculateDirection(Vector2 targetPos, Vector2 currentPos)
@@ -76,24 +93,22 @@ public class Enemy : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if(isTriggered)
+        if ((isTriggered && !IsInPlayerStoppingDistance()) || (!isTriggered && !IsInSpawningDistance()))
         {
             controller.Move(direction * speed * Time.deltaTime, false, jump);
+            animator.SetFloat("speed", Mathf.Abs(direction));
             jump = false;
         }
     }
 
-    public void HasCollided()
+    public bool IsReadyToFire()
     {
-        if(!IsInStoppingDistance())
-        {
-            jump = true;
-        }
+        return (isTriggered && IsInPlayerStoppingDistance());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(isPlayer(collision))
+        if(IsPlayer(collision))
         {
             isTriggered = true;
         }
@@ -101,13 +116,13 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(isPlayer(collision))
+        if(IsPlayer(collision))
         {
             isTriggered = false;
         }
     }
 
-    private bool isPlayer(Collider2D collision)
+    private bool IsPlayer(Collider2D collision)
     {
         return collision.tag == "Player";
     }
