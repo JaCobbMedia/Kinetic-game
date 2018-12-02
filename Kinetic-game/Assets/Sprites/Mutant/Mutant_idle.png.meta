@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: c63cc8b0c3db7ed4db973a35460bc6f6
+guid: a92fe8bd569efe24882a80b0d24950e6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Main_char_idle_0
+    21300000: Mutant_idle_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,7 +85,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_char_idle_0
+      name: Mutant_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efa332ccd2bb7c949ab53b3d4cae2d17
+      spriteID: 98e6e61530ad5894b97fd62cd4eb96ad
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 907f85fbb26aa914fbe2e2f3a9259874
+    spriteID: b6b7555225112404c91b92ed4d4a845a
     vertices: []
     indices: 
     edges: []

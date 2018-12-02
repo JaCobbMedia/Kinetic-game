@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 6b3117fa30ffa624e8ecf3233c945ca6
+guid: aa5ad9ca985385f42b3c4812c8c54652
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Main_char_run_right_spritesheet_0
-    21300002: Main_char_run_right_spritesheet_1
-    21300004: Main_char_run_right_spritesheet_2
-    21300006: Main_char_run_right_spritesheet_3
-    21300008: Main_char_run_right_spritesheet_4
-    21300010: Main_char_run_right_spritesheet_5
-    21300012: Main_char_run_right_spritesheet_6
-    21300014: Main_char_run_right_spritesheet_7
+    21300000: Mutant_walk_spritesheet_0
+    21300002: Mutant_walk_spritesheet_1
+    21300004: Mutant_walk_spritesheet_2
+    21300006: Mutant_walk_spritesheet_3
+    21300008: Mutant_walk_spritesheet_4
+    21300010: Mutant_walk_spritesheet_5
+    21300012: Mutant_walk_spritesheet_6
+    21300014: Mutant_walk_spritesheet_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -71,7 +71,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,161 +92,161 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_0
+      name: Mutant_walk_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 5
-        width: 28
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2e4fb64549869b48a79fbfdc08b04d2
+      spriteID: 578423c30a1126445a0b8a8745c2cd3e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_1
+      name: Mutant_walk_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 3
-        width: 24
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b87582537c81e2645b418fd576c63128
+      spriteID: 80c76bb9fd8b15244b56cdaa241ecbfc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_2
+      name: Mutant_walk_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 153
-        y: 3
-        width: 15
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a419bcf6ce6893441af974f4996c5c85
+      spriteID: 7494c4ddafd221845922ef7900d36f86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_3
+      name: Mutant_walk_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 3
-        width: 17
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9aceb3c94152d145860ba9b506ac51c
+      spriteID: de4dc0674774e934b9695a27c738ac1b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_4
+      name: Mutant_walk_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 274
-        y: 5
-        width: 28
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 851f913d048931b49adcd2c9a3837585
+      spriteID: 7f3c4f0d6929cb643ac6abb3822fbaba
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_5
+      name: Mutant_walk_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 340
-        y: 3
-        width: 24
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cb5c10da9fa1e24bbc23194a8902bad
+      spriteID: 56d877248a5564c47a02622d4d393c3c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_6
+      name: Mutant_walk_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 410
-        y: 3
-        width: 15
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f57f43c268d73d438e4582521832198
+      spriteID: 17c617f3906af7249ab48ab46fd7706d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_char_run_right_spritesheet_7
+      name: Mutant_walk_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 472
-        y: 3
-        width: 17
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.359375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32075f246ff769b4daa7e790d8c0799a
+      spriteID: 00e71a6bc4a6d2345bd218eb943a39ab
       vertices: []
       indices: 
       edges: []
@@ -254,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 64b3defe14c46fd488dddfddbab168d3
+    spriteID: ac8d8545c0510ff498698c6f8f86462a
     vertices: []
     indices: 
     edges: []
