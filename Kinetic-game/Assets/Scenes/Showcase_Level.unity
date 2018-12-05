@@ -373,7 +373,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4759764065728558, guid: f6418b11c3f041d4eb411666843e0dfe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.21348
+      value: -0.15999937
       objectReference: {fileID: 0}
     - target: {fileID: 4759764065728558, guid: f6418b11c3f041d4eb411666843e0dfe, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1116,7 +1116,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 379645393}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c750accf7166100498cacc07cff3acde, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
@@ -7194,7 +7194,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4075244668116828, guid: e70421eddd5b65b46ae1c042248350a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.21348
+      value: -0.15999937
       objectReference: {fileID: 0}
     - target: {fileID: 4075244668116828, guid: e70421eddd5b65b46ae1c042248350a8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -26292,6 +26292,16 @@ Prefab:
     - target: {fileID: 4739134532089338, guid: 70c00bab3c888e94d9813075f96bc76f, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 212830055111981858, guid: 70c00bab3c888e94d9813075f96bc76f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -307889119
+      objectReference: {fileID: 0}
+    - target: {fileID: 212830055111981858, guid: 70c00bab3c888e94d9813075f96bc76f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70c00bab3c888e94d9813075f96bc76f, type: 2}
