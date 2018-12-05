@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: c63cc8b0c3db7ed4db973a35460bc6f6
+guid: 02a3395361c192d41ad20900ca6c05b5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Main_char_idle_0
+    21300000: Door_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,21 +85,21 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_char_idle_0
+      name: Door_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 24
         y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.359375}
+        width: 80
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efa332ccd2bb7c949ab53b3d4cae2d17
+      spriteID: 796c44bafb1401d4590454ac06dd648f
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 907f85fbb26aa914fbe2e2f3a9259874
+    spriteID: 8e8379705f6f2fd4f86f9021487cf63f
     vertices: []
     indices: 
     edges: []
