@@ -28,4 +28,12 @@ public class PlayerStatus : MonoBehaviour {
     {
         health += add;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Damage")
+        {
+            TakeDamage(5);
+        }
+    }
 }

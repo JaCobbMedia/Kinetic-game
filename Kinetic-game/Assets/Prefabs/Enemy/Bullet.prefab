@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1806895688555924}
+  m_RootGameObject: {fileID: 1233453346832952}
   m_IsPrefabAsset: 1
---- !u!1 &1806895688555924
+--- !u!1 &1233453346832952
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4093325488196770}
-  - component: {fileID: 120439753491731470}
-  - component: {fileID: 114916153958452078}
-  - component: {fileID: 70461307996387096}
+  - component: {fileID: 4670780658746486}
+  - component: {fileID: 120305146858608652}
+  - component: {fileID: 114060786966212160}
+  - component: {fileID: 50194722806061714}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -29,52 +29,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4093325488196770
+--- !u!4 &4670780658746486
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1806895688555924}
+  m_GameObject: {fileID: 1233453346832952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.023305, y: -2.741055, z: -0.0053752693}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.1, y: -5.54, z: -0.053469}
+  m_LocalScale: {x: 1.0743, y: 1.0743, z: 1.0743}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &70461307996387096
-CapsuleCollider2D:
+--- !u!50 &50194722806061714
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1806895688555924}
-  m_Enabled: 1
-  m_Density: 1
+  m_GameObject: {fileID: 1233453346832952}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.5, y: 0}
-  m_Size: {x: 0.8, y: 0.1}
-  m_Direction: 1
---- !u!114 &114916153958452078
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &114060786966212160
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1806895688555924}
+  m_GameObject: {fileID: 1233453346832952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26381a4ef65901743b1ee95720c6dbca, type: 3}
+  m_Script: {fileID: 11500000, guid: ee3c96897a81a144095bd89e983a0805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
---- !u!120 &120439753491731470
+  speed: 30
+--- !u!120 &120305146858608652
 LineRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1806895688555924}
+  m_GameObject: {fileID: 1233453346832952}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -105,8 +110,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1, y: 0, z: 1}
-  - {x: 4, y: 0, z: 1}
+  - {x: -1, y: 0, z: 0}
+  - {x: 1, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -114,8 +119,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.25943846
-        value: 0.34524208
+        time: 0
+        value: 0.1428566
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -127,35 +132,35 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 0}
       key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 1, g: 1, b: 1, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0.33962262, g: 0.18797877, b: 0.020825924, a: 1}
+      key3: {r: 0.7735849, g: 0.42718294, b: 0.04743683, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
-      ctime2: 65535
-      ctime3: 0
+      ctime1: 44911
+      ctime2: 52428
+      ctime3: 65535
       ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
+      atime1: 45104
+      atime2: 56283
+      atime3: 65535
       atime4: 0
       atime5: 0
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
+    numCapVertices: 23
     alignment: 0
     textureMode: 0
     generateLightingData: 0
