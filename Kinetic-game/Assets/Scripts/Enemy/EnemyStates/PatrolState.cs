@@ -20,8 +20,12 @@ public class PatrolState : IEnemyState
     public void Execute()
     {
         Patrol();
+        if (enemy.Target != null && enemy.InMeleeRange())
+        {
+            enemy.ChangeState(new MeleeState());
+        }
 
-        if(enemy.Target != null)
+        if (enemy.Target != null && enemy.InShootingRange())
         {
             enemy.ChangeState(new RangedState());
         }
