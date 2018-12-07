@@ -149,7 +149,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fc3a483a141027044830637a26ca3b4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   speed: 50
   controller: {fileID: 114844209314139852}
   animator: {fileID: 95185557896516104}
-  meleeRange: 2
+  meleeRange: 3
 --- !u!114 &114844209314139852
 MonoBehaviour:
   m_ObjectHideFlags: 1

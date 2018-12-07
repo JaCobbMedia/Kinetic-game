@@ -178,7 +178,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fc3a483a141027044830637a26ca3b4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6190cd111d2024b9d6784a82bb924e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 114802993736131486}
 --- !u!114 &114471886772855704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,7 +311,7 @@ MonoBehaviour:
   gunPosition: {fileID: 4022079195415988}
   bulletPrefab: {fileID: 1233453346832952, guid: cedb98785decd1a41af2441959790ce3,
     type: 2}
-  shootingRange: 0
+  shootingRange: 10
 --- !u!212 &212029273341122938
 SpriteRenderer:
   m_ObjectHideFlags: 1
