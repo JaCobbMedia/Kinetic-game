@@ -178,7 +178,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: fc3a483a141027044830637a26ca3b4d, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  deathTime: 5
   controller: {fileID: 114471886772855704}
   animator: {fileID: 95378355694547894}
   gunPosition: {fileID: 4022079195415988}

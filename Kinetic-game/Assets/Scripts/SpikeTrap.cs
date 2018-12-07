@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class SpikeTrap : MonoBehaviour {
 
-    private bool isTriggered = false;
-
-    void Update () {
-        if (isTriggered)
-            killPlayer(GameObject.FindGameObjectWithTag("Player"));
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(IsPlayer(collision))
+        if(IsPlayer(collision) || IsEnemy(collision))
         {
-            isTriggered = true;
+            DamageTarget(collision.gameObject);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(IsPlayer(collision))
+        if(IsPlayer(collision) || IsEnemy(collision))
         {
-            isTriggered = false;
         }
     }
 
@@ -32,9 +25,23 @@ public class SpikeTrap : MonoBehaviour {
         return collision.tag == "Player";
     }
 
-    public void killPlayer(GameObject hitTarget)
+    private bool IsEnemy(Collider2D collision)
+    {
+        return collision.tag == "Enemy";
+    }
+
+    public void DamageTarget(GameObject hitTarget)
     {
         //Destroy(hitTarget);
-        hitTarget.GetComponent<PlayerStatus>().TakeDamage(200f);
+        PlayerStatus player = hitTarget.GetComponent<PlayerStatus>();
+        if(player != null)
+        {
+            player.TakeDamage(200f);
+        }
+        Enemy enemy = hitTarget.GetComponent<Enemy>();
+        if(enemy != null)
+        {
+            enemy.Die();
+        }
     }
 }

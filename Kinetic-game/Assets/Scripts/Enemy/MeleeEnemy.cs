@@ -12,9 +12,8 @@ public class MeleeEnemy : Enemy {
 
 	public override void Attack()
     {
-        Target.GetComponent<PlayerStatus>().TakeDamage(damage);
         PlayAnimation();
-
+        Target.GetComponent<PlayerStatus>().TakeDamage(damage);
     }
 
     private void PlayAnimation()

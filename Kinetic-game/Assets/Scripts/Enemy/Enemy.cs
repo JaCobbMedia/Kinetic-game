@@ -12,6 +12,9 @@ public abstract class Enemy : MonoBehaviour {
     [SerializeField]
     public float speed;
 
+    [SerializeField]
+    private float deathTime = 5f;
+
     public CharacterController2D controller;
 
     public Animator animator;
@@ -72,6 +75,12 @@ public abstract class Enemy : MonoBehaviour {
                 ChangeDirection();
             }
         }
+    }
+
+    public void Die()
+    {
+        ChangeState(new DeadState());
+        Destroy(gameObject, deathTime);
     }
 
 }
