@@ -43,5 +43,12 @@ public class PlayerStatus : MonoBehaviour {
         gameObject.transform.position = spawn.position;
         yield return new WaitForSeconds(2);
         playerMovement.ChangeControlStatus(true);
+    }  
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Damage")
+        {
+            TakeDamage(5);
+        }
     }
 }
