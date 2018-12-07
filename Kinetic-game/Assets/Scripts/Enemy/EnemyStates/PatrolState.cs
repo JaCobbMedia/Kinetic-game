@@ -9,12 +9,12 @@ public class PatrolState : IEnemyState
 
     private float patrolTimer;
 
-    private float patrolDuration = 10f;
+    private float patrolDuration;
 
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;
-        this.enemy.ChangeDirection();
+        this.patrolDuration = Random.Range(3, 10);
     }
 
     public void Execute()

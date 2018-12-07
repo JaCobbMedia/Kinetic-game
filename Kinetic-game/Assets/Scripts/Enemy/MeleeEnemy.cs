@@ -7,10 +7,13 @@ public class MeleeEnemy : Enemy {
     [SerializeField]
     private float meleeRange;
 
+    [SerializeField]
+    private float damage;
+
 	public override void Attack()
     {
         PlayAnimation();
-
+        Target.GetComponent<PlayerStatus>().TakeDamage(damage);
     }
 
     private void PlayAnimation()

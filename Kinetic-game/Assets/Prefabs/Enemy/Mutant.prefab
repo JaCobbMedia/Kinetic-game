@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623124266216552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.95, y: -3.12, z: 0}
+  m_LocalPosition: {x: -3.3, y: -2.94, z: 0}
   m_LocalScale: {x: 7.444073, y: 7.444073, z: 7.444073}
   m_Children:
   - {fileID: 4125044038666262}
@@ -245,10 +245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fd8da5320a4614eb8cae66cfb3e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 75
+  deathTime: 5
   controller: {fileID: 114844209314139852}
   animator: {fileID: 95185557896516104}
   meleeRange: 2
+  damage: 10
 --- !u!114 &114844209314139852
 MonoBehaviour:
   m_ObjectHideFlags: 1

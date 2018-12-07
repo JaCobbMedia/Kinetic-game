@@ -12,6 +12,9 @@ public class Bullet : MonoBehaviour {
 
     private Vector2 direction;
 
+    [SerializeField]
+    private float damage;
+
 	void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
 	}
@@ -28,5 +31,13 @@ public class Bullet : MonoBehaviour {
     public void Initialize(Vector2 direction)
     {
         this.direction = direction;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerStatus>().TakeDamage(damage);
+        }
     }
 }
