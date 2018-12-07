@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedState : IEnemyState
+public class MeleeState : IEnemyState
 {
-
     private Enemy enemy;
 
-    private float shootTimer;
+    private float attackTimer;
 
-    [SerializeField]
-    private float shootCooldown = 1f;
+    private float attackCooldown = 1f;
 
-    private bool canShoot = true;
+    private bool canAttack = true;
 
     public void Enter(Enemy enemy)
     {
@@ -21,13 +19,8 @@ public class RangedState : IEnemyState
 
     public void Execute()
     {
-        Shoot();
-
-        if(enemy.Target != null)
-        {
-            enemy.Move();
-        }
-        else
+        Attack();
+        if (enemy.Target == null || !enemy.InMeleeRange())
         {
             enemy.ChangeState(new PatrolState());
         }
@@ -45,19 +38,19 @@ public class RangedState : IEnemyState
         }
     }
 
-    private void Shoot()
+    private void Attack()
     {
-        shootTimer += Time.deltaTime;
+        attackTimer += Time.deltaTime;
 
-        if(shootTimer >= shootCooldown)
+        if (attackTimer >= attackCooldown)
         {
-            canShoot = true;
-            shootTimer = 0;
+            canAttack = true;
+            attackTimer = 0;
         }
-        if(canShoot)
+        if (canAttack)
         {
             enemy.Attack();
-            canShoot = false;
+            canAttack = false;
         }
     }
 }

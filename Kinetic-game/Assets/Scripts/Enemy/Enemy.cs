@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
-
+[RequireComponent(typeof(CharacterController2D))]
+public abstract class Enemy : MonoBehaviour {
 
     private IEnemyState currentState;
 
@@ -16,15 +16,13 @@ public class Enemy : MonoBehaviour {
 
     public Animator animator;
 
-    public bool Attack { get; set; }
+    protected float direction = 1f;
 
-    [SerializeField]
-    private Transform gunPosition;
+    public abstract void Attack();
 
-    [SerializeField]
-    private GameObject bulletPrefab;
+    public abstract bool InMeleeRange();
 
-    private float direction = 1f;
+    public abstract bool InShootingRange();
 
     void Start () {
         ChangeState(new IdleState());
@@ -76,17 +74,4 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void Shoot()
-    {
-        if(direction == 1)
-        {
-            GameObject tmp = (GameObject)Instantiate(bulletPrefab, gunPosition.position, Quaternion.identity);
-            tmp.GetComponent<Bullet>().Initialize(Vector2.right);
-        } 
-        else
-        {
-            GameObject tmp = (GameObject)Instantiate(bulletPrefab, gunPosition.position, Quaternion.identity);
-            tmp.GetComponent<Bullet>().Initialize(Vector2.left);
-        }
-    }
 }
