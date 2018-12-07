@@ -248,7 +248,8 @@ MonoBehaviour:
   speed: 50
   controller: {fileID: 114844209314139852}
   animator: {fileID: 95185557896516104}
-  meleeRange: 3
+  meleeRange: 2
+  damage: 10
 --- !u!114 &114844209314139852
 MonoBehaviour:
   m_ObjectHideFlags: 1
