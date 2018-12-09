@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61406546594929160}
   m_Layer: 0
   m_Name: Sight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1817272132500378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.010006, y: 5.624999, z: -0.140625}
+  m_LocalPosition: {x: 68.41, y: -12.97, z: -0.140625}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 4574885038015944}
@@ -195,7 +195,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: 0.17}
+  m_Offset: {x: 0.25, y: 0.17}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -206,7 +206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45, y: 0.04}
+  m_Size: {x: 1, y: 0.04}
   m_EdgeRadius: 0
 --- !u!61 &61638603987414796
 BoxCollider2D:
@@ -348,7 +348,7 @@ SpriteRenderer:
   m_SortingLayerID: -307889119
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: f76c20f8c6bc89943959ff24c68e78f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f76c20f8c6bc89943959ff24c68e78f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
