@@ -17,7 +17,6 @@ public class LineCreator : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0))
         {
-            activeLine.FinishDrawing();
             activeLine = null;
         }
 
