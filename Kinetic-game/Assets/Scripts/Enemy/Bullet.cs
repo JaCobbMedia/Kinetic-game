@@ -40,5 +40,9 @@ public class Bullet : MonoBehaviour {
             collision.gameObject.GetComponent<PlayerStatus>().TakeDamage(damage);
             Destroy(gameObject, 1);
         }
+        if(collision.gameObject.tag == "Line")
+        {
+            Destroy(gameObject);
+        }
     }
 }

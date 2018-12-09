@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 68813761829285330}
   m_Layer: 8
   m_Name: Line
-  m_TagString: Untagged
+  m_TagString: Line
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 120924974657270838}
   edgeCol: {fileID: 68813761829285330}
+  lifetime: 3
 --- !u!120 &120924974657270838
 LineRenderer:
   m_ObjectHideFlags: 1
