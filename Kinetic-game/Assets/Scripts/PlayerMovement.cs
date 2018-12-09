@@ -13,17 +13,36 @@ public class PlayerMovement : MonoBehaviour {
     public float movementSpeed;
 
     private bool jump = false;
+    private bool canControl = true;
 
 	void Update ()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * movementSpeed;
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
-        jump = Input.GetButtonDown("Jump");
+        if (canControl)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * movementSpeed;
+            animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetBool("isJumping", true);
+            }
+        } 
 	}
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
+    }
+
+    public void OnLanding()
+    {
+        Debug.Log("landing");
+        animator.SetBool("isJumping", false);
+    }
+
+    public void ChangeControlStatus(bool status)
+    {
+        canControl = status;
     }
 }
