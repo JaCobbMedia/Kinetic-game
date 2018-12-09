@@ -8,8 +8,6 @@ public class Line : MonoBehaviour {
     public LineRenderer lineRenderer;
     public EdgeCollider2D edgeCol;
 
-    private bool isDrawn;
-
     List<Vector2> points;
 
     public float lifetime = 3f;
@@ -41,22 +39,7 @@ public class Line : MonoBehaviour {
 
     private void Start()
     {
-        this.isDrawn = true;
         Destroy(gameObject, lifetime);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if((collision.gameObject.tag == "Enemy" ||
-            collision.gameObject.tag == "Player") && isDrawn)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    public void FinishDrawing()
-    {
-        this.isDrawn = false;
     }
 
 }

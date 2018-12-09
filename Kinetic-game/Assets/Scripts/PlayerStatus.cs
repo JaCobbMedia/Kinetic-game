@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour {
 
+
     public float health;
-    private Animator animator;
-    public Transform spawn;
-    private PlayerMovement playerMovement;
 
 	void Start () {
-        animator = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
 	}
 	
 	void Update () {
 
-        animator.SetFloat("health", health);
-        if (health <= 0)
+        if(health <= 0)
         {
-            StartCoroutine(Respawn());
+            Destroy(gameObject);
         }
 		
 	}
@@ -33,15 +28,4 @@ public class PlayerStatus : MonoBehaviour {
     {
         health += add;
     }
-
-    private IEnumerator Respawn()
-    {
-        Debug.Log("playerStatus");
-        playerMovement.ChangeControlStatus(false);
-        yield return new WaitForSeconds(2);
-        health = 100;
-        gameObject.transform.position = spawn.position;
-        yield return new WaitForSeconds(2);
-        playerMovement.ChangeControlStatus(true);
-    }  
 }
