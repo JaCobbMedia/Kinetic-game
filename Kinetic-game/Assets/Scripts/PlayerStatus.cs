@@ -36,7 +36,6 @@ public class PlayerStatus : MonoBehaviour {
 
     private IEnumerator Respawn()
     {
-        Debug.Log("playerStatus");
         playerMovement.ChangeControlStatus(false);
         yield return new WaitForSeconds(2);
         health = 100;
