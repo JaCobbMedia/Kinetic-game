@@ -7,8 +7,15 @@ public class LevelFinish : MonoBehaviour {
 
     public int sceneNumber;
     public ParticleSystem particles;
+    public GameObject levelEndDoor;
+    private Animator doorAnimator;
 
-	void Start () {
+    void Start () {
+
+        if (levelEndDoor.GetComponent<Animator>() != null)
+        {
+            doorAnimator = levelEndDoor.GetComponent<Animator>();
+        }
         particles = GetComponent<ParticleSystem>();
 	}
 
@@ -16,14 +23,18 @@ public class LevelFinish : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            particles.Play();
+            if (doorAnimator != null)
+            {
+                doorAnimator.SetTrigger("Open");
+            }
+            //particles.Play();
             StartCoroutine(WaitForLevelEnd());
         }
     }
 
     private IEnumerator WaitForLevelEnd()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(sceneNumber);
     }
 
