@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour {
 
+    public delegate void HealthEventHander(float damage);
+    public event HealthEventHander EventHealthDeduction;
+
+    public float maxHealth = 100f;
     public float health;
     private Animator animator;
     public Transform spawn;
@@ -27,6 +31,10 @@ public class PlayerStatus : MonoBehaviour {
     public void TakeDamage(float damage)
     {
         health -= damage;
+        if (EventHealthDeduction != null)
+        {
+            EventHealthDeduction(damage);
+        }
     }
 
     public void RegenerateHealth(float add)
@@ -38,7 +46,7 @@ public class PlayerStatus : MonoBehaviour {
     {
         playerMovement.ChangeControlStatus(false);
         yield return new WaitForSeconds(2);
-        health = 100;
+        health = maxHealth;
         gameObject.transform.position = spawn.position;
         yield return new WaitForSeconds(2);
         playerMovement.ChangeControlStatus(true);
